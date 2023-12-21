@@ -35,7 +35,7 @@ try {
   const isAuthorized = await client.isAuthorizedWithRedoclyByRegion();
   
   if (!isAuthorized) {
-    const clientToken = await promptClientToken(client.domain);
+    const clientToken = 'https://app.' + client.domain + '/profile';
     await client.login(clientToken);
   }
 
