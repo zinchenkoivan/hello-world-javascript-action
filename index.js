@@ -13,6 +13,9 @@ try {
   const config = JSON.parse(core.getInput('config'));
   console.log('The argv payload: ${argv}', argv);
   console.log('The config payload: ${config}', config);
+  console.log('------------------------------------------------');
+  console.log('The config.region--->', config.region);
+  console.log('------------------------------------------------');
   
   const client = new RedoclyClient(config.region);
   const isAuthorized = await client.isAuthorizedWithRedoclyByRegion();
