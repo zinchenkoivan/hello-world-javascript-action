@@ -11,8 +11,9 @@ const DESTINATION_REGEX =
 try {
   const argv = JSON.parse(core.getInput('argv'))
   const config = JSON.parse(core.getInput('config'));
-  console.log('The argv payload: ${argv}', argv);
-  console.log('The config payload: ${config}', config);
+  console.log('The argv payload:', argv);
+  console.log('The config payload:', config);
+
   console.log('------------------------------------------------');
   console.log('The config.region--->', config.region);
   console.log('------------------------------------------------');
