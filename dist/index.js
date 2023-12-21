@@ -24,8 +24,12 @@ const DESTINATION_REGEX =
 try {
   const argv = JSON.parse(core.getInput('argv'))
   const config = JSON.parse(core.getInput('config'));
-  console.log('The argv payload: ${argv}');
-  console.log('The config payload: ${config}');
+  console.log('The argv payload:', argv);
+  console.log('The config payload:', config);
+
+  console.log('------------------------------------------------');
+  console.log('The config.region--->', config.region);
+  console.log('------------------------------------------------');
   
   const client = new _redocly_openapi_core__WEBPACK_IMPORTED_MODULE_1__/* .RedoclyClient */ .xL(config.region);
   const isAuthorized = await client.isAuthorizedWithRedoclyByRegion();
